@@ -39,8 +39,6 @@ class Order(object):
 def twenty_percent_discount(order: Order):
     """
     20% discount for any product
-    :param order:
-    :return discount:
     """
     disc = order.base_price * Decimal("0.20")
     return disc
@@ -48,9 +46,7 @@ def twenty_percent_discount(order: Order):
 
 def fixed_discount(order: Order):
     """
-    5k discount fixed amount discount
-    :param order:
-    :return:
+    5k fixed amount discount
     """
     return Decimal("5000")
 
