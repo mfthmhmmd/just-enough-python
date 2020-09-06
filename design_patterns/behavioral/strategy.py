@@ -18,8 +18,8 @@ class Order(object):
         """
         Base price with fee added
         """
-        ret = self.base_price + self.fee
-        return ret
+        total = self.base_price + self.fee
+        return total
 
     def price_after_discount(self) -> Decimal:
         """

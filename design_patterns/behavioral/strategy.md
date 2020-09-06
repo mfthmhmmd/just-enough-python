@@ -12,7 +12,7 @@ cenderung melakukan transaksi secara berulang.
 
 Dari *requirements*, ada dua jenis diskon, *fixed* dan *percentage*, dan sangat mungkin akan ada 
 jenis diskon lainnya seperti diskon hanya untuk metode pembayaran tertentu, dll. Tanpa pikir panjang, sebagai pemrogram yang cekatan,
-langsung saja kita buat implementasi diskon tersebut, lagipula fitur ini harus dirilis sebelum sprint berikutnya. 
+langsung saja kita buat implementasi diskon tersebut, lagipula fitur ini harus dirilis sebelum iterasi berikutnya. 
 
 ```python
 def calculate_discount(order):
@@ -36,7 +36,7 @@ dimengerti dan di-*maintain*.
 
 ### Solution
 *Strategy pattern* menganjurkan kita agar memecah "algoritma" yang berbeda menjadi komponen yang terisolasi, 
-sebagai contoh pada file [strategy.py](strategy.py).
+sebagai contoh pada modul [strategy.py](strategy.py).
 
 Kita dapat dengan mudah menambahkan diskon baru, sebagai contoh :
 
@@ -49,9 +49,9 @@ def harbolnas_discount(order):
 ```
 
 Tentu saja kita dapat memperluas kemampuan fitur diatas, 
-mungkin akan ada *requirement* untuk mengubah jumlah diskon secara dinamis dari *dashboard* operasional? dan mungkin kita 
-diharuskan  untuk menyimpan jumlah diskon pada *database*. 
-Secara garis besar pattern-nya akan kurang lebih sama, dan sekompleks apapun skema perhitungan diskon nantinya, 
-harus terisolasi dalam komponen tersendiri tanpa harus mencampuri `client` yang memanggilnya. 
+mungkin akan ada *requirement* untuk mengubah jumlah diskon secara dinamis dari *dashboard*? atau mungkin kita 
+diharuskan  untuk menyimpan jumlah diskon pada *database*.
+Secara garis besar *pattern* tersebut akan kurang lebih sama, dan sekompleks apapun skema perhitungan diskon nantinya, 
+harus terisolasi dalam komponen tersendiri tanpa harus mencampuri kode `client` yang memanggilnya. 
 
 
